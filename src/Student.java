@@ -91,15 +91,25 @@ public class Student {
         return finalUsername ;
     }
 
+    public void addGrade(String subject, Double score){
+        Grade grade = new Grade(subject, score);
+        this.Grades.add(grade);
+    }
+
+    public ArrayList<Grade> getGrades() {
+        return Grades;
+    }
+
     @Override
-    public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", department='" + department + '\'' +
-                ", age=" + age +
-                ", userName='" + userName + '\'' +
-                ", studentNumber=" + studentNumber +
-                ", fullTime=" + fullTime +
-                '}';
+    public String  toString() {
+        return
+                "Student Name: " + name + '\'' +
+                " Department: " + department + '\'' +
+                " Age: " + age +
+                " Username: " + userName + '\'' +
+                " Student Num: " + studentNumber +
+                " Full Time: " + fullTime +
+                " Grades: " + Grades;
+
     }
 }

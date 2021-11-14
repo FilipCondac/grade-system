@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 public class Grade {
 
-    ArrayList<String> Grades = new ArrayList<String>();
+
     String subject = "";
     double score = 0;
 
@@ -26,7 +26,7 @@ public class Grade {
         this.score = score;
     }
 
-    static char getLetterGrade(double score){
+    public static char getLetterGrade(double score){
         if(score > 100 || score < 0){
             return 'E';
         }
@@ -44,5 +44,15 @@ public class Grade {
         }
 
         return 'E';
+    }
+
+
+    @Override
+    public String toString() {
+        return
+                "Subject: " + subject + "  " +
+                "Score: " + score + "  " +
+                "Grade: " + getLetterGrade(score) +  " || ";
+
     }
 }
